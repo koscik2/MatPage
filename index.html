@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Mateusza</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>    
+    <header class="site-header">
+        <div class="header-graphics">
+            <span class="emoji gamepad">🎮</span>
+            <span class="emoji rocket">🚀</span>
+            <span class="emoji math">🧮</span>
+            <span class="emoji book">📚</span>
+            <span class="emoji pencil">✏️</span>
+        </div>
+        <h1>To ja, Mateusz!</h1>
+        <p class="tagline">SP 20 klasa VIIIc</p>
+    </header>
+
+    <!-- Top bar menu -->
+    <nav class="top-menu">
+        <ul>
+            <li><a href="#about">O mnie</a></li>
+            <li><a href="#hobbies">Moje hobby</a></li>
+            <li><a href="#school">Szkoła</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- About section -->
+        <section id="about" class="card">
+            <h2>O mnie</h2>
+            <p>
+                Cześć! Nazywam się Mateusz i mam 15 lat. Lubię matematykę, fizykę, historię,
+                piłkę nożną oraz gry wideo. <br/>Mój ulubiony kolor
+                to niebieski, a ulubione zwierzę to pingwin 🐧. W tym roku kończę naukę w Szkole Podstawowej nr 20.
+            </p>
+            <ul class="facts">
+                <li><strong>Wiek:</strong> 15 lat</li>
+                <li><strong>Klasa:</strong> VIIIc</li>
+                <li><strong>Ulubiona gra:</strong> League of Legends</li>
+                <li><strong>Ulubiony przedmiot:</strong> Matematyka</li>
+                <li><strong>Ulubione jedzenie:</strong> Naleśniki z truskawkami 🍓</li>
+            </ul>
+        </section>
+
+        <!-- Hobbies section -->
+        <section id="hobbies" class="card">
+            <h2>Moje hobby</h2>
+            <p>Kliknij hobby, aby przeczytać więcej.</p>
+            <div class="hobby-grid">
+                <a href="pages/hobby-soccer.html" class="hobby" data-title="Piłka nożna" data-scope="all">
+                    <div class="hobby-icon">⚽</div>
+                    <h3>Piłka nożna</h3>
+                    <p>Interesuję się piłką nożną. Znam prawie wszystkich piłkarzy!</p>
+                </a>
+                <a href="pages/hobby-escape.html" class="hobby" data-title="Escape room" data-scope="all">
+                    <div class="hobby-icon">🧩</div>
+                    <h3>Escape room</h3>
+                    <p>Uwielbiam rozwiązywać zagadki i łamigłówki w escape roomach.</p>
+                </a>
+                <a href="pages/hobby-math.html" class="hobby" data-title="Matematyka" data-scope="all">
+                    <div class="hobby-icon">🧮</div>
+                    <h3>Matematyka</h3>
+                    <p>Rozwiązuję zadania matematyczne i lubię wyzwania logiczne.</p>
+                </a>
+                <a href="pages/hobby-gaming.html" class="hobby" data-title="Gry wideo" data-scope="all">
+                    <div class="hobby-icon">🎮</div>
+                    <h3>Gry wideo</h3>
+                    <p>League of Legends to moja ulubiona gra!</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- School section -->
+        <section id="school" class="card">
+            <h2>Moja szkoła</h2>
+            <p>
+                Chodzę do <strong><a href="https://sp20.edupage.org/">Szkoły Podstawowej nr 20</a></strong>. Moja wychowawczyni
+                to Anna Jakubowska-Tyszczenko. W tym roku kończę naukę w klasie VIIIc i opuszczam mury szkoły. 
+                Planuję kontynuować naukę w <strong><a href="https://lo2grudziadz.pl/">II Liceum Ogólnokształcącym</a></strong>.
+            </p>
+        </section>
+
+        <!-- Gallery section -->
+        <section id="gallery" class="card">
+            <h2>Galeria</h2>
+            <p>Oto kilka zdjęć z moich ulubionych wydarzeń! Kliknij obrazek, aby zobaczyć więcej.</p>
+            <div class="gallery">
+                <a href="pages/energylandia.html" class="gallery-item" data-title="Energylandia" data-scope="all">
+                    <div class="thumb thumb-1">🎢</div>
+                    <figcaption>Energylandia</figcaption>
+                </a>
+                <a href="pages/sabaton.html" class="gallery-item" data-title="Koncert Sabaton" data-scope="all">
+                    <div class="thumb thumb-2">🤘</div>
+                    <figcaption>Koncert Sabaton</figcaption>
+                </a>
+                <a href="pages/zniwa.html" class="gallery-item" data-title="Koncert Żniwa" data-scope="all">
+                    <div class="thumb thumb-3">👩‍🎤</div>
+                    <figcaption>Koncert Żniwa</figcaption>
+                </a>
+                <a href="pages/bobr.html" class="gallery-item" data-title="Spływ Bobrem" data-scope="all">
+                    <div class="thumb thumb-4">🚣‍♂️</div>
+                    <figcaption>Spływ Bobrem</figcaption>
+                </a>                
+            </div>
+        </section>
+
+        <!-- Detail viewer: shown when a gallery item is clicked -->
+        <section id="detail-view" class="card" hidden>
+            <div class="detail-header">
+                <button type="button" id="back-to-gallery" class="back-btn">← Powrót do strony głównej</button>
+                <h2 id="detail-title">Szczegóły</h2>
+            </div>
+            <iframe id="detail-frame" name="detail-frame" class="detail-frame"
+                    title="Szczegóły galerii"></iframe>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact" class="card">
+            <h2>Kontakt</h2>
+            <p>
+                Chcesz się przywitać? Wyślij e-mail na
+                <a href="mailto:mateusz@example.com">mateusz@example.com</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Strona Mateusza • Stworzona z ❤️ w 8 klasie</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
